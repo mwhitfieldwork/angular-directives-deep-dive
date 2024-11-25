@@ -2,6 +2,9 @@
   <app-learning-resources />
 
   <hr />
-
+  @if(isAdmin()){
+    <p>ONly admin should see this</p>
+  }
+  
   <app-auth />
 </main>
