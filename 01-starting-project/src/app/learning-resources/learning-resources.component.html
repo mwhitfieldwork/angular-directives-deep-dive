@@ -3,12 +3,13 @@
 
 <ul>
   <li>
-    <a href="https://angular.dev">Angular Documentation</a>
+    <a href="https://angular.dev" appSafeLink="myapp-docs-link">Angular Documentation</a>
+       <!--<a href="https://angular.dev" appSafeLink queryparam="myapp-docs-link">Angular Documentation</a> -->
+  </li><!-- adding a space and defininig the queryparam variable in the template is how that gets used on line 25-->
+  <li>
+    <a href="https://academind.com/courses" appSafeLink ="myapp-courses-link">Academind Courses</a>
   </li>
   <li>
-    <a href="https://academind.com/courses">Academind Courses</a>
-  </li>
-  <li>
-    <a href="https://www.google.com/search?q=angular">Google</a>
+    <a href="https://www.google.com/search?q=angular" appSafeLink ="myapp-google-link">Google</a>
   </li>
 </ul>
