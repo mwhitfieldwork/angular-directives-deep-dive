@@ -2,9 +2,12 @@
   <app-learning-resources />
 
   <hr />
+  <app-auth />
+  
   @if(isAdmin()){
     <p>ONly admin should see this</p>
   }
-  
-  <app-auth />
+  <ng-template  appAuth="admin"><!-- ng templatedoesn't automatically show the contents. Starts as hidden-->
+  <p>Only authenticated users should see this</p>
+  </ng-template>
 </main>
