@@ -13,5 +13,7 @@
 
   <!-- You can also use the directive with an asterisk as weel-->
    <!-- Below, it will automatically add the ng-tmeplate behind the scenes-->
-  <p *appAuth="'admin'">Are you authenticated?</p>
+  <p *appAuth="'admin'" class="protected-content admin">Are you authenticated?</p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">Are you a User?</p>
+  <p *appAuth="'guest'" class="protected-content authenticated">Are you a guest?</p>
 </main>
