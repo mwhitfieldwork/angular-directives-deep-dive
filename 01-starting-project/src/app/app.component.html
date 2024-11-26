@@ -1,10 +1,19 @@
 <main>
-  <app-learning-resources />
+  <app-learning-resources/>
 
   <hr />
-  @if(isAdmin()){
-    <p>ONly admin should see this</p>
-  }
-  
   <app-auth />
+  
+ <!---- @if(isAdmin()){
+    <p>ONly admin should see this</p>
+  }-->
+  <ng-template  appAuth="admin"><!-- ng templatedoesn't automatically show the contents. Starts as hidden-->
+  <p>Only authenticated users should see this</p>
+  </ng-template>
+
+  <!-- You can also use the directive with an asterisk as weel-->
+   <!-- Below, it will automatically add the ng-tmeplate behind the scenes-->
+  <p *appAuth="'admin'" class="protected-content admin">Are you authenticated?</p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">Are you a User?</p>
+  <p *appAuth="'guest'" class="protected-content authenticated">Are you a guest?</p>
 </main>

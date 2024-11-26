@@ -1,14 +1,16 @@
 <h2>Learning Resources</h2>
-<p>Helpful resources you might want to use in addition to this course.</p>
+<p appLog>Helpful resources you might want to use in addition to this course.</p>
+<!--appLog here will give information about the host element in the console when clicked  -->
 
 <ul>
   <li>
-    <a href="https://angular.dev">Angular Documentation</a>
+    <a href="https://angular.dev" appSafeLink="myapp-docs-link">Angular Documentation</a>
+       <!--<a href="https://angular.dev" appSafeLink queryparam="myapp-docs-link">Angular Documentation</a> -->
+  </li><!-- adding a space and defininig the queryparam variable in the template is how that gets used on line 25-->
+  <li>
+    <a href="https://academind.com/courses" appSafeLink ="myapp-courses-link">Academind Courses</a>
   </li>
   <li>
-    <a href="https://academind.com/courses">Academind Courses</a>
-  </li>
-  <li>
-    <a href="https://www.google.com/search?q=angular">Google</a>
+    <a href="https://www.google.com/search?q=angular" appSafeLink ="myapp-google-link">Google</a>
   </li>
 </ul>
